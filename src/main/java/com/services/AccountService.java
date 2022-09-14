@@ -1,9 +1,9 @@
-package datn.store.service;
+package com.services;
 
 import java.util.List;
 import java.util.Optional;
 
-import datn.store.entity.Accounts;
+import com.entities.Accounts;
 
 public interface AccountService {
 	List<Accounts> findAll();

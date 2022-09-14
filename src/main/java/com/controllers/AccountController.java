@@ -1,4 +1,4 @@
-package datn.store.controller;
+package com.controllers;
 
 import java.util.List;
 import java.util.Optional;
@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import datn.store.entity.Accounts;
-import datn.store.service.AccountService;
+import com.entities.Accounts;
+import com.services.AccountService;
 
 @Controller
 public class AccountController {
@@ -20,7 +20,6 @@ public class AccountController {
 
 	@RequestMapping("/accounts/index")
 	public String index(Model model) {
-		System.out.println("Tuấn vẫn ngu như thường");
 		List<Accounts> acc = accSer.findAll();
 		model.addAttribute("acc", acc);
 		return "admin/accounts/index";

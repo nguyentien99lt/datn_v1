@@ -1,4 +1,4 @@
-package datn.store.impl;
+package com.impl;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,16 +6,16 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import datn.store.entity.Category;
-import datn.store.repository.CategoryRepository;
-import datn.store.service.CategoryService;
+import com.entities.Category;
+import com.repositories.CategoryRepository;
+import com.services.CategoryService;
 
 @Service
 public class CategoryServiceImpl implements CategoryService {
 	@Autowired
 	private CategoryRepository cateRep;
 	 @Override
-	public void saveCate(Category cate) {
+		public void saveCate(Category cate) {
 		cateRep.save(cate);
 	}
 	 @Override

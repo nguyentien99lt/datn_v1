@@ -1,4 +1,4 @@
-package datn.store.entity;
+package com.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

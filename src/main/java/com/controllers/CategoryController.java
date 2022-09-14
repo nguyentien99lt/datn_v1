@@ -1,4 +1,4 @@
-package datn.store.controller;
+package com.controllers;
 
 import java.util.List;
 import java.util.Optional;
@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import datn.store.entity.Category;
-import datn.store.service.CategoryService;
+import com.entities.Category;
+import com.services.CategoryService;
 
 @Controller
 public class CategoryController {
