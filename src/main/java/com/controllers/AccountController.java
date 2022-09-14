@@ -20,6 +20,7 @@ public class AccountController {
 
 	@RequestMapping("/accounts/index")
 	public String index(Model model) {
+		System.out.println("Tuấn vẫn ngu như thường");
 		List<Accounts> acc = accSer.findAll();
 		model.addAttribute("acc", acc);
 		return "admin/accounts/index";
