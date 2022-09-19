@@ -40,8 +40,14 @@ public class CategoryServiceImpl implements CategoryService {
 	}
 
 	@Override
-	public void deleteCate(Long cateDelete) {
-		cateRep.deleteById(cateDelete);
+	public Boolean deleteCate(Long id) {
+		Category cate = cateRep.findById(id).get();
+		if (cate != null) {
+			cateRep.delete(cate);
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	@Override
